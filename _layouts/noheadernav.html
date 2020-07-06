@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<header>
+    {% if page.url != "/" and page.url != "/index.html" %}
+    <a href="/">
+    {% endif %}
+    <h1>Vadimus.</h1>
+    {% if page.url != "/index.html" %}
+    </a>
+    {% endif %}
+</header>
+<div class="container">
+{{ content }}
+</div>
+<footer>
+    <div class="container">
+        <p class="center small">
+            Copyright &copy; <a href="https://twitter.com/stut" target="twitter">Stuart Dallas</a>. All rights reserved.
+        </p>
+    </div>
+</footer>
