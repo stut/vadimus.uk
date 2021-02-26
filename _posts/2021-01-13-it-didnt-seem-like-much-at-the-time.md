@@ -1,5 +1,8 @@
 ---
 published: true
+layout: post
+date: 2021-01-13T00:00:00.000Z
+categories: 642-things-to-write-about personal
 ---
 _It didn't seem like much at the time_; it never seemed like much at the time, but the effects were cumulative. I didn't notice the gradual withering away of any sense of self-worth, and it seemed like nobody else did either.
 
