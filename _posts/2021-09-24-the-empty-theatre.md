@@ -6,7 +6,7 @@ categories: five-minute-writer
 ---
 I like empty theatres, before the cast, the crew and the audience arrive. The gathering of chairs assembled to take in the majestic stage. The lights, poised to illuminate the magic as it happens.
 
-There's an eeriness to the feeling of walking down the aisle, footsteps echoing around the vast empty space through which people will later experience another world. Arriving at the stage the clicks of my shoes resonate off the lofty ceiling as I climb the seven wooden steps to the apron.
+There's an eeriness to the feeling of walking down the aisle, footsteps on the carpet mutedly echoing around the vast empty space in which people will later experience another world. Arriving at the stage the clicks of my shoes resonate off the lofty ceiling as I climb the seven wooden steps to the apron.
 
 Turning to face my ghostly audience I pause to take in the epic sight. Hundreds of potential eyes watch me clickety-clack across the stage, my gaze drawn travelling from the blaconies on the left, across the upper circle, and down to the balconies on the right, all perfectly framing the bulk of my admiring fans.
 
