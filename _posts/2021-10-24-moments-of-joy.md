@@ -11,3 +11,5 @@ I'm currently in hospital being treated for pneumonia so many of this first batc
 1. The always cheery and giggly student nurse dispensing everyone's morning drugs.
 1. Perfectly toasted toast and great butter in the morning.
 1. Soaking buttered toast and tea in your mouth before swallowing.
+1. Currys installers giving a reassuring air of competence.
+1. Opening a new iPhone and admiring the thought that's gone into the packaging.
