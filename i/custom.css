@@ -53,6 +53,11 @@ header.post h1 {
     text-align: right !important;
 }
 
+iframe {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .trunc {
     white-space: nowrap !important;
     overflow: hidden !important;
