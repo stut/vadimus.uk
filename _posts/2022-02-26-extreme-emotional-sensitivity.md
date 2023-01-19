@@ -1,5 +1,8 @@
 ---
-published: false
+published: true
+layout: post
+date: 2023-01-19T00:00:00.000Z
+categories: personal
 ---
 I was just watching [an interview by Russell Howard with Jordan Peterson](https://www.youtube.com/watch?v=PYM-sS-0-yg) and he mentioned something that really hit home.
 
@@ -7,7 +10,7 @@ It's well known that he went through a period of depression but I've never heard
 
 The most recent example was something of a shock to me when it happened. I was perusing YouTube, following the recommendations wherever they took me, and I came across the video below.
 
-<iframe width="560" src="https://www.youtube.com/embed/4ic7RNS4Dfo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/4ic7RNS4Dfo"></iframe>
 
 Even looking up that embed code and seeing the first few seconds I could feel the emotion starting to overtake my body.
 
@@ -37,6 +40,20 @@ Most of the time I feel quite strongly that I am good at my job. Certainly not p
 
 For the most part this view of myself has been reinforced by colleagues and bosses throughout my career. I've made my share of mistakes but feedback has overall been very positive.
 
-## Split personality
+## Split personality, or a natural consequence
 
-So what I seem to have is something of a split personality, confidence-wise. 
+So what I seem to have is something of a split personality, confidence-wise. Work is fine, but my personal life is something of a shit-show.
+
+I was bullied at school. A lot. Geeky, fat, bespectacled, and socially awkward, though I'm not sure whether that last trait was there from day one or was also a result of the bullying. I learned over the years to shrink into a corner and be as quiet as I can. And I still do it now.
+
+When out at the pub, or at any other social occasion, you'll find me off to the side, often alone, just people watching. I love people watching - they're fascinating. But you'll have to get me pretty drunk to get me up and dancing, or the centre of attention in any size of group.
+
+I can handle one-on-one conversation; I'm good at that. I've been told I'm a great listener, and I've also been taught I share way to much way too soon with strangers. I'm not sure if that's a problem or not, it certainly hasn't been so far but I may just have been lucky.
+
+## Am I happy?
+
+Sometimes I think I am, but I also think that's probably because I've resigned myself to accepting that this is who I am. I struggle to think that I deserve anything more.
+
+## Does it matter?
+
+I don't know, but I'm trying to find out.
