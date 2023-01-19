@@ -21,3 +21,4 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         target_branch: 'prod'
+        keep_history: true
