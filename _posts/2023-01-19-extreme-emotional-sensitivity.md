@@ -1,7 +1,6 @@
 ---
 published: true
 layout: post
-date: 2023-01-19T00:00:00.000Z
 categories: personal
 ---
 I was just watching [an interview by Russell Howard with Jordan Peterson](https://www.youtube.com/watch?v=PYM-sS-0-yg) and he mentioned something that really hit home.

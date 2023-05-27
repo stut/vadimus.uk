@@ -1,7 +1,6 @@
 ---
 published: true
 layout: post
-date: 2021-09-24T00:00:00.000Z
 categories: five-minute-writer
 ---
 I like empty theatres, before the cast, the crew and the audience arrive. The gathering of chairs assembled to take in the majestic stage. The lights, poised to illuminate the magic as it happens.
