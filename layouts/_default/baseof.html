@@ -9,6 +9,10 @@
 <meta name="description" content="{{ $description }}">
 <meta name="author" content="Stuart Dallas">
 <meta name="color-scheme" content="light dark">
+<script>
+  // A light or dark choice from the footer toggle, applied before the page draws.
+  try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
+</script>
 <link rel="canonical" href="{{ partial "url.html" .Permalink }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ "index.xml" | absURL }}">
 <meta property="og:site_name" content="{{ site.Title }}">
@@ -38,7 +42,37 @@
 </main>
 <footer class="site-footer">
   <p>© <a href="https://stut.me/">Stuart Dallas</a>. All rights reserved.</p>
-  <p><a href="{{ partial "url.html" "/privacy.html" }}">Privacy</a> · <a href="/index.xml">Feed</a></p>
+  <p><a href="{{ partial "url.html" "/privacy.html" }}">Privacy</a> · <a href="/index.xml">Feed</a><span class="theme-item" hidden> · <button type="button" class="theme-toggle"></button></span></p>
 </footer>
+<script>
+  // The toggle shows only with JavaScript. A choice is stored only while it
+  // differs from the system setting, so choosing the system's own scheme
+  // goes back to following it.
+  (() => {
+    const root = document.documentElement;
+    const system = matchMedia("(prefers-color-scheme: dark)");
+    const button = document.querySelector(".theme-toggle");
+    const isDark = () => (root.dataset.theme || (system.matches ? "dark" : "light")) === "dark";
+    const label = () => { button.textContent = isDark() ? "Light mode" : "Dark mode"; };
+    button.addEventListener("click", () => {
+      const theme = isDark() ? "light" : "dark";
+      try {
+        if ((theme === "dark") === system.matches) {
+          delete root.dataset.theme;
+          localStorage.removeItem("theme");
+        } else {
+          root.dataset.theme = theme;
+          localStorage.setItem("theme", theme);
+        }
+      } catch {
+        root.dataset.theme = theme;
+      }
+      label();
+    });
+    system.addEventListener("change", label);
+    label();
+    button.parentElement.hidden = false;
+  })();
+</script>
 </body>
 </html>
