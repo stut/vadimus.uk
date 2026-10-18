@@ -1,0 +1,21 @@
+{{ define "main" }}
+<article>
+  <header>
+    <h1>{{ .Title }}</h1>
+    {{- if eq .Section "posts" }}
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+    {{- end }}
+  </header>
+  {{ .Content }}
+</article>
+{{- if eq .Section "posts" }}
+<nav class="post-nav">
+  {{- with .PrevInSection }}
+  <a class="older" rel="prev" href="{{ partial "url.html" .RelPermalink }}"><span>Older</span>{{ .Title }}</a>
+  {{- end }}
+  {{- with .NextInSection }}
+  <a class="newer" rel="next" href="{{ partial "url.html" .RelPermalink }}"><span>Newer</span>{{ .Title }}</a>
+  {{- end }}
+</nav>
+{{- end }}
+{{ end }}

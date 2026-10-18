@@ -1,0 +1,28 @@
+baseURL = 'https://vadimus.uk/'
+languageCode = 'en-gb'
+title = 'Vadimus'
+
+timeZone = 'Europe/London'
+uglyURLs = true
+disableKinds = ['taxonomy', 'term', 'section']
+
+[params]
+  description = 'A place for me to flex and develop my writing muscle.'
+
+# Posts take their date and slug from the file name, as Jekyll did, and
+# keep the URLs Jekyll gave them: /<slug>.html.
+[frontmatter]
+  date = [':filename', ':default']
+
+[permalinks]
+  posts = '/:slug'
+
+# The feed stays at /feed.xml, where Jekyll put it.
+[outputFormats]
+  [outputFormats.rss]
+    baseName = 'feed'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

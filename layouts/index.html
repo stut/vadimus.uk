@@ -1,0 +1,11 @@
+{{ define "main" }}
+<p class="intro">{{ site.Params.description }}</p>
+<ol class="post-list">
+  {{- range where site.RegularPages "Section" "posts" }}
+  <li>
+    <a href="{{ partial "url.html" .RelPermalink }}">{{ .Title }}</a>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+  </li>
+  {{- end }}
+</ol>
+{{ end }}

@@ -1,7 +1,6 @@
 ---
-published: true
-layout: post
-categories: personal
+title: "My Reaction Was Instinct"
+categories: [personal]
 ---
 It was an insignificant dose, but I couldn't see past what they were. I don't need these; I don't take these, so why was I holding two packs of them, enough for two months?
 
