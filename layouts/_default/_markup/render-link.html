@@ -1,0 +1,6 @@
+{{- $href := .Destination -}}
+{{- if or (strings.HasPrefix $href "/") (strings.HasPrefix $href site.BaseURL) -}}
+  {{- $href = partial "url.html" $href -}}
+{{- end -}}
+<a href="{{ $href | safeURL }}" {{- with .Title }} title="{{ . }}" {{- end }}>{{ .Text }}</a>
+{{- /**/ -}}

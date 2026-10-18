@@ -1,8 +1,6 @@
 ---
-layout: noheadernav
-title: About Vadimus
-description: Why is this here? Why is anything here?
-published: true
+title: "About Vadimus"
+description: "Why is this here? Why is anything here?"
 ---
 This site is a place for [me](https://twitter.com/stut) to stretch my writing muscles.
 
@@ -17,7 +15,3 @@ I'm always interested in engaging on the subjects I write about and the best way
 #### Why "Vadimus"?
 
 [Vadimus means](https://www.latin-is-simple.com/en/vocabulary/search/?q=Vadimus) to _go_ or to _advance_. The reason I chose it for this site is because it's intended to make me get going and advance my writing skills. Also because the domain name was available.
-
-<p class="center">
-  <a href="/">index</a>
-</p>

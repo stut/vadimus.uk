@@ -1,7 +1,6 @@
 ---
-published: true
-layout: post
-categories: 642-things-to-write-about personal
+title: "It Didn’t Seem Like Much At The Time"
+categories: [642-things-to-write-about, personal]
 ---
 _It didn't seem like much at the time_; it never seemed like much at the time, but the effects were cumulative. I didn't notice the gradual withering away of any sense of self-worth, and it seemed like nobody else did either.
 

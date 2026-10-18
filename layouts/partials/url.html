@@ -1,0 +1,9 @@
+{{- /* Cloudflare Pages serves x.html at /x and redirects /x.html there, so a
+production build links to /x, and to / for an index.html. hugo server only
+serves the .html form, so development builds keep it. */ -}}
+{{- $u := . -}}
+{{- if hugo.IsProduction }}
+  {{- $u = replaceRE `/index\.html(#.*)?$` "/$1" $u }}
+  {{- $u = replaceRE `\.html(#.*)?$` "$1" $u }}
+{{- end -}}
+{{- return $u -}}

@@ -1,8 +1,6 @@
 ---
-layout: post
-title: A moment of forgiveness
-categories: 642-things-to-write-about personal
-published: true
+title: "A moment of forgiveness"
+categories: [642-things-to-write-about, personal]
 ---
 I can’t believe she left me.
 

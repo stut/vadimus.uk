@@ -1,8 +1,6 @@
 ---
-layout: post
-title: A conversation you regret not having
-categories: 642-things-to-write-about personal
-published: true
+title: "A conversation you regret not having"
+categories: [642-things-to-write-about, personal]
 ---
 I’m a coward, especially when it comes to putting myself out there. This is probably not news to anyone who knows me. For as long as I can remember the idea of presenting myself to others, explicitly or implicitly asking them to judge me has filled me with a paralysing dread.
 
