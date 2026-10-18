@@ -10,7 +10,7 @@
 <meta name="author" content="Stuart Dallas">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="{{ partial "url.html" .Permalink }}">
-<link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ "feed.xml" | absURL }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ "index.xml" | absURL }}">
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ $description }}">
@@ -38,7 +38,7 @@
 </main>
 <footer class="site-footer">
   <p>© <a href="https://stut.me/">Stuart Dallas</a>. All rights reserved.</p>
-  <p><a href="{{ partial "url.html" "/privacy.html" }}">Privacy</a> · <a href="/feed.xml">Feed</a></p>
+  <p><a href="{{ partial "url.html" "/privacy.html" }}">Privacy</a> · <a href="/index.xml">Feed</a></p>
 </footer>
 </body>
 </html>

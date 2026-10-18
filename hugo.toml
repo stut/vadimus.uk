@@ -17,11 +17,6 @@ disableKinds = ['taxonomy', 'term', 'section']
 [permalinks]
   posts = '/:slug'
 
-# The feed stays at /feed.xml, where Jekyll put it.
-[outputFormats]
-  [outputFormats.rss]
-    baseName = 'feed'
-
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
