@@ -1,9 +1,9 @@
 {{ define "main" }}
-<article>
+<article{{ if eq .Section "posts" }} class="post{{ if .Params.dropcap }} dropcap{{ end }}"{{ end }}>
   <header>
     <h1>{{ .Title }}</h1>
     {{- if eq .Section "posts" }}
-    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+    <p class="meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time> · {{ .ReadingTime }} min read</p>
     {{- end }}
   </header>
   {{ .Content }}

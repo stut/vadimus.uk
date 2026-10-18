@@ -1,6 +1,7 @@
 ---
 title: "Extreme Emotional Sensitivity"
 categories: [personal]
+dropcap: true
 ---
 I was just watching [an interview by Russell Howard with Jordan Peterson](https://www.youtube.com/watch?v=PYM-sS-0-yg) and he mentioned something that really hit home.
 

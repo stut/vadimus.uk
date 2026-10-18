@@ -1,5 +1,5 @@
 baseURL = 'https://vadimus.uk/'
-languageCode = 'en-gb'
+locale = 'en-gb'
 title = 'Vadimus'
 
 timeZone = 'Europe/London'

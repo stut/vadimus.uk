@@ -1,1 +1,251 @@
-body { max-width: 40rem; margin: 0 auto; padding: 1rem; font-family: system-ui; }
+/* Vadimus: warm paper by day, warm ink by night. */
+
+:root {
+  --paper: #f8f3ea;
+  --paper-2: #f0e8db;
+  --ink: #2b2520;
+  --muted: #6b5f55;
+  --accent: #a3432a;
+  --rule: #e2d7c6;
+  --seal: var(--accent);
+  --seal-mark: var(--paper);
+  --display: "Iowan Old Style", "Palatino Linotype", Palatino, "URW Palladio L", P052, "Book Antiqua", Georgia, serif;
+  --text: Charter, "Bitstream Charter", "Sitka Text", Cambria, "Noto Serif", Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1d1a17;
+    --paper-2: #27231f;
+    --ink: #e9e1d5;
+    --muted: #a89b8d;
+    --accent: #e59a76;
+    --rule: #3a332d;
+    /* Deeper than the accent, so the seal is not the brightest thing on the page. */
+    --seal: #b5603f;
+    --seal-mark: #f6ece0;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem)/1.7 var(--text);
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+.site-header, main, .site-footer {
+  width: min(100% - 2.5rem, 37rem);
+  margin-inline: auto;
+}
+
+::selection { background: color-mix(in srgb, var(--accent) 28%, transparent); }
+
+/* Links: underlined everywhere in running text, so colour is never the only cue. */
+a {
+  color: inherit;
+  text-decoration: underline 1px;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 0.2em;
+}
+a:hover { color: var(--accent); text-decoration-thickness: 2px; }
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 2.25rem 0;
+}
+.site-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font: italic 1.6rem/1 var(--display);
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+.site-title:hover { color: inherit; }
+.mark { width: 2.25rem; height: 2.25rem; flex: none; fill: var(--seal); }
+.mark path { fill: var(--seal-mark); }
+.mark .ring { fill: none; stroke: var(--seal-mark); stroke-width: 0.7; opacity: 0.55; }
+.site-title:hover .mark { transform: rotate(-8deg); }
+.site-nav a, .meta, .post-nav span, .post-list time, .site-footer {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+/* Tracking for the uppercase labels only. */
+.site-nav a, .meta, .post-nav span { text-transform: uppercase; letter-spacing: 0.06em; }
+.site-nav a { text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+
+main { flex: 1; padding-block: 3.5rem 4rem; }
+
+/* Home */
+.intro {
+  margin: 0 0 2.5rem;
+  font: italic 1.45rem/1.4 var(--display);
+  color: var(--muted);
+  text-wrap: balance;
+}
+.post-list { list-style: none; margin: 0; padding: 0; }
+.post-list li {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding-block: 0.7rem;
+}
+.post-list li::after {
+  content: "";
+  flex: 1 1 1rem;
+  order: 1;
+  border-bottom: 1px dotted var(--muted);
+  opacity: 0.6;
+}
+.post-list a {
+  font: 1.3rem/1.35 var(--display);
+  text-decoration: none;
+}
+/* The whole row is the link. */
+.post-list a::after { content: ""; position: absolute; inset: 0; }
+.post-list li:hover a { text-decoration: underline 1px var(--accent); }
+.post-list li:hover::after { border-color: var(--accent); opacity: 1; }
+.post-list time { order: 2; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+/* Articles */
+article > header { margin-bottom: 2.5rem; }
+h1, h2, h3, h4 {
+  font-family: var(--display);
+  font-weight: 600;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+h1 { margin: 0 0 0.6rem; font-size: clamp(2.1rem, 1.6rem + 2vw, 2.9rem); letter-spacing: -0.01em; }
+h2 { margin: 2.6rem 0 0.8rem; font-size: 1.45rem; }
+h3 { margin: 2.2rem 0 0.6rem; font-size: 1.25rem; font-style: italic; font-weight: 500; }
+h4 { margin: 2rem 0 0.5rem; font-size: 1.1rem; }
+.meta { margin: 0; }
+
+article p { margin: 0 0 1.15em; text-wrap: pretty; }
+
+/* A dropped initial and a small-caps first line, for posts that set
+   dropcap: true. They suit a long opening paragraph that starts with a
+   plain letter. The first line uses the display face, which has real
+   small caps. */
+.dropcap > header + p { display: flow-root; }
+.dropcap > header + p::first-line { font-family: var(--display); font-variant-caps: small-caps; letter-spacing: 0.03em; }
+@supports (initial-letter: 3) or (-webkit-initial-letter: 3) {
+  .dropcap > header + p::first-letter {
+    -webkit-initial-letter: 3;
+    initial-letter: 3;
+    margin-right: 0.5rem;
+    font-family: var(--display);
+    font-weight: 600;
+    color: var(--accent);
+  }
+}
+
+/* An end mark echoing the seal. */
+.post > p:last-child::after {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-left: 0.4em;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+article iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: 2rem 0;
+  border: 0;
+  border-radius: 6px;
+  background: var(--paper-2);
+}
+
+/* The privacy opt-out checkbox */
+label:has(input[type="checkbox"]) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.75rem 1.1rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--paper-2);
+  cursor: pointer;
+}
+label:has(input):hover, label:has(input:checked) { border-color: var(--accent); }
+label:has(input:checked) { background: color-mix(in srgb, var(--accent) 12%, var(--paper-2)); }
+input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  flex: none;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+/* Older and newer */
+.post-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+.post-nav a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font: 1.15rem/1.35 var(--display);
+  text-decoration: none;
+}
+.post-nav span { text-transform: uppercase; }
+.older span::before { content: "← " / ""; }
+.newer { grid-column: 2; text-align: right; }
+.newer span::after { content: " →" / ""; }
+
+/* Footer */
+.site-footer {
+  padding-block: 2rem 3rem;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  line-height: 1.6;
+}
+.site-footer p { margin: 0.2rem 0; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .mark { transition: transform 0.3s ease; }
+  a { transition: color 0.15s, text-decoration-color 0.15s; }
+}
+
+@media (max-width: 34rem) {
+  .site-header { padding-top: 1.5rem; }
+  main { padding-top: 2.5rem; }
+  .post-list li { flex-direction: column; gap: 0.15rem; padding-block: 0.75rem; border-top: 1px solid var(--rule); }
+  .post-list li:last-child { border-bottom: 1px solid var(--rule); }
+  .post-list li::after { display: none; }
+  .post-nav { grid-template-columns: 1fr; }
+  .newer { grid-column: auto; }
+}

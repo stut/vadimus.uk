@@ -1,6 +1,7 @@
 ---
 title: "The Empty Theatre"
 categories: [five-minute-writer]
+dropcap: true
 ---
 I like empty theatres, before the cast, the crew and the audience arrive. The gathering of chairs assembled to take in the majestic stage. The lights, poised to illuminate the magic as it happens.
 
